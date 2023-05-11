@@ -1,0 +1,142 @@
+{
+  "id": "89cfc84e-b7a4-492e-800e-4eecf8eec526",
+  "version": "2.0",
+  "name": "DH_Selenium",
+  "url": "https://www.youtube.com",
+  "tests": [{
+    "id": "348ae085-9873-4555-b560-9969e222a5d4",
+    "name": "grupo4",
+    "commands": [{
+      "id": "12a47bd0-ee20-47d2-8849-75934e872544",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8971dae7-cd7c-4925-971d-38d9b74b178a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "834x743",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "adccbef5-0dd9-4051-a541-7eab6f93c528",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "id=subscriber-count",
+      "targets": [],
+      "value": "6,400 suscriptores"
+    }, {
+      "id": "f17d1052-7cbc-4475-80b0-08131fcab0ea",
+      "comment": "",
+      "command": "type",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#search-input > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "digital house"
+    }, {
+      "id": "d8945e3d-3ff6-4adc-b8c9-23db12771582",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#search-input > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "adb146f9-cc24-43cc-b590-2eccfad8b3d4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#channel-title > #container #text",
+      "targets": [
+        ["css=#channel-title > #container #text", "css:finder"],
+        ["xpath=(//yt-formatted-string[@id='text'])[61]", "xpath:attributes"],
+        ["xpath=(//div[@id='text-container']/yt-formatted-string)[40]", "xpath:idRelative"],
+        ["xpath=//a/div/ytd-channel-name/div/div/yt-formatted-string", "xpath:position"],
+        ["xpath=//yt-formatted-string[contains(.,'Digital House')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d54d293-163b-4a54-bd1d-c06425a0709f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#channel-title > #container #text",
+      "targets": [
+        ["css=#channel-title > #container #text", "css:finder"],
+        ["xpath=(//yt-formatted-string[@id='text'])[61]", "xpath:attributes"],
+        ["xpath=(//div[@id='text-container']/yt-formatted-string)[40]", "xpath:idRelative"],
+        ["xpath=//a/div/ytd-channel-name/div/div/yt-formatted-string", "xpath:position"],
+        ["xpath=//yt-formatted-string[contains(.,'Digital House')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16fefc79-bd3b-4f6a-98a5-e17edf85a2ff",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#main-link > #info",
+      "targets": [
+        ["css=#main-link > #info", "css:finder"],
+        ["xpath=(//div[@id='info'])[5]", "xpath:attributes"],
+        ["xpath=//a[@id='main-link']/div", "xpath:idRelative"],
+        ["xpath=//ytd-channel-renderer/div/div[2]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7eb42fa-ce5a-432c-b59f-df61f05771ef",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#main-link > #info",
+      "targets": [
+        ["css=#main-link > #info", "css:finder"],
+        ["xpath=(//div[@id='info'])[5]", "xpath:attributes"],
+        ["xpath=//a[@id='main-link']/div", "xpath:idRelative"],
+        ["xpath=//ytd-channel-renderer/div/div[2]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31ab1a5d-fcc2-4634-b982-9289c287d85a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#channel-title > #container #text",
+      "targets": [
+        ["css=#channel-title > #container #text", "css:finder"],
+        ["xpath=(//yt-formatted-string[@id='text'])[61]", "xpath:attributes"],
+        ["xpath=(//div[@id='text-container']/yt-formatted-string)[40]", "xpath:idRelative"],
+        ["xpath=//a/div/ytd-channel-name/div/div/yt-formatted-string", "xpath:position"],
+        ["xpath=//yt-formatted-string[contains(.,'Digital House')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "afb75a23-a8e0-4b88-a647-2c57b64e8c41",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ytp-volume-control-hover > .ytp-volume-slider",
+      "targets": [
+        ["css=.ytp-volume-control-hover > .ytp-volume-slider", "css:finder"],
+        ["xpath=//div[@id='c4-player']/div[26]/div[2]/div/span/div/div", "xpath:idRelative"],
+        ["xpath=//div[26]/div[2]/div/span/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b65840a2-24a2-4f90-8654-38cb06604716",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["348ae085-9873-4555-b560-9969e222a5d4"]
+  }],
+  "urls": ["https://www.youtube.com/"],
+  "plugins": []
+}
