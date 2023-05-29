@@ -3,6 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BACKEND.iml" filepath="$PROJECT_DIR$/BACKEND.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase11Mesas/Clase11Mesas.iml" filepath="$PROJECT_DIR$/Clase11Mesas/Clase11Mesas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase11live/Clase11live.iml" filepath="$PROJECT_DIR$/Clase11live/Clase11live.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase12Mesas/Clase12Mesas.iml" filepath="$PROJECT_DIR$/Clase12Mesas/Clase12Mesas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase13/Clase13.iml" filepath="$PROJECT_DIR$/Clase13/Clase13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase13Mesas/Clase13Mesas.iml" filepath="$PROJECT_DIR$/Clase13Mesas/Clase13Mesas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase14/Clase14.iml" filepath="$PROJECT_DIR$/Clase14/Clase14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase14Mesas/Clase14Mesas.iml" filepath="$PROJECT_DIR$/Clase14Mesas/Clase14Mesas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase14Vivo/Clase14Vivo.iml" filepath="$PROJECT_DIR$/Clase14Vivo/Clase14Vivo.iml" />
     </modules>
   </component>
 </project>

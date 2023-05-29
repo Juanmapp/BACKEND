@@ -1,0 +1,28 @@
+2023-05-19 20:23:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE [*]IF EXIST TEST; CREATE TABLE TEST(ID INT PRIMARY KEY, NAME VARCHAR(255))"; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF EXIST TEST; CREATE TABLE TEST(ID INT PRIMARY KEY, NAME VARCHAR(255))"; expected "identifier"; SQL statement:
+DROP TABLE IF EXIST TEST; CREATE TABLE TEST(ID INT PRIMARY KEY, NAME VARCHAR(255)) [42001-214]
+2023-05-19 20:24:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "JUAN"
+Data conversion error converting "JUAN" [22018-214]
+2023-05-19 20:25:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "HOLA"
+Data conversion error converting "HOLA" [22018-214]
+2023-05-19 20:28:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "HOLA"
+Data conversion error converting "HOLA" [22018-214]
+2023-05-19 20:28:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "HOLA"
+Data conversion error converting "HOLA" [22018-214]
+2023-05-19 20:29:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "Hello"
+Data conversion error converting "Hello" [22018-214]
+2023-05-19 20:29:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "Hello"
+Data conversion error converting "Hello" [22018-214]
+2023-05-19 20:30:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "Hello"
+Data conversion error converting "Hello" [22018-214]
+2023-05-19 20:31:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "Hello"
+Data conversion error converting "Hello" [22018-214]
