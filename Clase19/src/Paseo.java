@@ -53,6 +53,8 @@ public class Paseo {
             FileInputStream filIn = new FileInputStream("perros.dat");
             ObjectInputStream archiIn = new ObjectInputStream(filIn);
 
+
+
             ArrayList <Perro> dia;
 
             for (int i = 0; i < 5; i++) {
@@ -61,7 +63,6 @@ public class Paseo {
                 dia = (ArrayList<Perro>) archiIn.readObject();
                 for ( Perro p: dia
                      ) {
-                    System.out.println(p);
                 }
             }
 
