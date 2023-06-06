@@ -1,0 +1,5 @@
+- Analizar si tengo que agregar la clase turno y de ser asi , pasarlo como parametro en odontologo y paciente
+- Agregar logica a las clases DAO
+- Completar clases controller 
+- Documentar
+
