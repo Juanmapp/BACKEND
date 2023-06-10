@@ -7,29 +7,30 @@ public class Paciente {
     private int id;
     private String nombre;
     private String apellido;
-    private String domicilio;
-    private int dni;
+    private Domicilio domicilio;
+    private String dni;
     private Date fechaDeAlta;
 
-    private Odontologo odontologo;
+    public Paciente() {
+    }
 
-    public Paciente(int id, String nombre, String apellido, String domicilio, int dni, Date fechaDeAlta, Odontologo odontologo) {
+    public Paciente(int id, String nombre, String apellido, Domicilio domicilio, String dni, Date fechaDeAlta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.domicilio = domicilio;
         this.dni = dni;
         this.fechaDeAlta = fechaDeAlta;
-        this.odontologo = odontologo;
+
     }
 
-    public Paciente(String nombre, String apellido, String domicilio, int dni, Date fechaDeAlta, Odontologo odontologo) {
+    public Paciente(String nombre, String apellido, Domicilio domicilio, String dni, Date fechaDeAlta ) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.domicilio = domicilio;
         this.dni = dni;
         this.fechaDeAlta = fechaDeAlta;
-        this.odontologo = odontologo;
+
     }
 
     public int getId() {
@@ -56,19 +57,19 @@ public class Paciente {
         this.apellido = apellido;
     }
 
-    public String getDomicilio() {
+    public Domicilio getDomicilio() {
         return domicilio;
     }
 
-    public void setDomicilio(String domicilio) {
+    public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
@@ -80,11 +81,4 @@ public class Paciente {
         this.fechaDeAlta = fechaDeAlta;
     }
 
-    public Odontologo getOdontologo() {
-        return odontologo;
-    }
-
-    public void setOdontologo(Odontologo odontologo) {
-        this.odontologo = odontologo;
-    }
 }

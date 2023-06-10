@@ -8,6 +8,9 @@ public class NuevaClinicaOdontologicaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NuevaClinicaOdontologicaApplication.class, args);
+
+
+
 	}
 
 }

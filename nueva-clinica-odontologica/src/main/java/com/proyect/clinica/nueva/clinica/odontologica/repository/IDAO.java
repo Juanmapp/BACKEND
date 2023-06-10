@@ -1,10 +1,14 @@
 package com.proyect.clinica.nueva.clinica.odontologica.repository;
 
 import com.proyect.clinica.nueva.clinica.odontologica.model.Odontologo;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
 
 public interface IDAO<T> {
 
-    public T listar(int id);
+    public List<T> listar();
 
     public T agregar(T t);
 
