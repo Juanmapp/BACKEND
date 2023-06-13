@@ -1,16 +1,24 @@
-package com.proyect.clinica.nueva.clinica.odontologica.model;
+package com.proyect.Clinica2.persistence.entity;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Odontologo {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer id;
+    @Column
         private String apellido;
+    @Column
     private String nombre;
+    @Column
     private String matricula;
 
     public Odontologo() {
     }
 
-    public Odontologo(int id, String apellido, String nombre, String matricula) {
+    public Odontologo(Integer id, String apellido, String nombre, String matricula) {
         this.id = id;
         this.apellido = apellido;
         this.nombre = nombre;
@@ -23,11 +31,11 @@ public class Odontologo {
         this.matricula = matricula;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

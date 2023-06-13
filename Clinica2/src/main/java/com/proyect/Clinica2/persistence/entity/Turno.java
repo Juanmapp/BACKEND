@@ -1,22 +1,29 @@
-package com.proyect.clinica.nueva.clinica.odontologica.model;
+package com.proyect.Clinica2.persistence.entity;
+
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
-
+@Entity
 public class Turno {
-    private int id;
+    @Id
+    @GeneratedValue (strategy = GenerationType.SEQUENCE)
+    private Integer id;
+    @Column
     private Paciente paciente;
+    @Column
     private Odontologo odontologo;
+    @Column
     private LocalDateTime fechayHora;
 
     public Turno() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

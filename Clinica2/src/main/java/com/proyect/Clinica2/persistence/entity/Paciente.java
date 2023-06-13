@@ -1,43 +1,54 @@
-package com.proyect.clinica.nueva.clinica.odontologica.model;
+package com.proyect.Clinica2.persistence.entity;
+
+
+
+import jakarta.persistence.*;
 
 import java.util.Date;
 
+@Entity
 public class Paciente {
-
-    private int id;
+@Id
+@GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer id;
+    @Column
     private String nombre;
+    @Column
     private String apellido;
-    private Domicilio domicilio;
+    //Como ver la relacion para ponerlo en la tabla
+
+    @Column
     private String dni;
-    private Date fechaDeAlta;
+    @Column
+    private Date fechaDeAlta; // Hay que hacer una clase?
 
     public Paciente() {
     }
 
-    public Paciente(int id, String nombre, String apellido, Domicilio domicilio, String dni, Date fechaDeAlta) {
+    public Paciente(Integer id, String nombre, String apellido, String dni, Date fechaDeAlta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.domicilio = domicilio;
+
         this.dni = dni;
         this.fechaDeAlta = fechaDeAlta;
 
     }
 
-    public Paciente(String nombre, String apellido, Domicilio domicilio, String dni, Date fechaDeAlta ) {
+    public Paciente(String nombre, String apellido, String dni, Date fechaDeAlta ) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.domicilio = domicilio;
+
         this.dni = dni;
         this.fechaDeAlta = fechaDeAlta;
 
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -55,14 +66,6 @@ public class Paciente {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-
-    public Domicilio getDomicilio() {
-        return domicilio;
-    }
-
-    public void setDomicilio(Domicilio domicilio) {
-        this.domicilio = domicilio;
     }
 
     public String getDni() {

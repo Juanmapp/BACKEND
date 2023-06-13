@@ -1,4 +1,4 @@
-package com.proyect.clinica.nueva.clinica.odontologica.controller;
+package com.proyect.Clinica2.controller;
 
 import com.proyect.clinica.nueva.clinica.odontologica.model.Paciente;
 import com.proyect.clinica.nueva.clinica.odontologica.service.PacienteService;
