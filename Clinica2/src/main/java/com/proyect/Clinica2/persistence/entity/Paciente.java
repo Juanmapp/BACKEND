@@ -2,9 +2,11 @@ package com.proyect.Clinica2.persistence.entity;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 public class Paciente {
@@ -21,6 +23,14 @@ public class Paciente {
     private String dni;
     @Column
     private Date fechaDeAlta; // Hay que hacer una clase?
+    @OneToMany(mappedBy = "paciente")
+    @JsonIgnore
+    private Set<Turno> turnos;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_domicilio" , referencedColumnName= "id")
+    private Domicilio domicilio;
+
 
     public Paciente() {
     }
@@ -42,6 +52,14 @@ public class Paciente {
         this.dni = dni;
         this.fechaDeAlta = fechaDeAlta;
 
+    }
+
+    public Set<Turno> getTurnos() {
+        return turnos;
+    }
+
+    public void setTurnos(Set<Turno> turnos) {
+        this.turnos = turnos;
     }
 
     public Integer getId() {

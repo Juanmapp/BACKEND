@@ -9,9 +9,11 @@ public class Turno {
     @Id
     @GeneratedValue (strategy = GenerationType.SEQUENCE)
     private Integer id;
-    @Column
+    @ManyToOne
+    @JoinColumn(name = "estudiante_id" , nullable = false)
     private Paciente paciente;
-    @Column
+    @ManyToOne
+    @JoinColumn(name = "odontologo_id" , nullable = false)
     private Odontologo odontologo;
     @Column
     private LocalDateTime fechayHora;
