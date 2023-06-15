@@ -43,7 +43,7 @@ public class OdontologoController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarOdontologo(@PathVariable Integer id) {
         odontologoService.eliminar(id);
-        return ResponseEntity.ok(HttpStatus.OK)
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 
 

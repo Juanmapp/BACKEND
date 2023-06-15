@@ -2,7 +2,8 @@ package com.proyect.Clinica2.persistence.entity;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
+
+import java.util.Date;
 
 @Entity
 public class Turno {
@@ -10,13 +11,13 @@ public class Turno {
     @GeneratedValue (strategy = GenerationType.SEQUENCE)
     private Integer id;
     @ManyToOne
-    @JoinColumn(name = "estudiante_id" , nullable = false)
+    @JoinColumn(name = "paciente_id" , nullable = false)
     private Paciente paciente;
     @ManyToOne
     @JoinColumn(name = "odontologo_id" , nullable = false)
     private Odontologo odontologo;
     @Column
-    private LocalDateTime fechayHora;
+    private Date fechayHora;
 
     public Turno() {
     }
@@ -45,11 +46,11 @@ public class Turno {
         this.odontologo = odontologo;
     }
 
-    public LocalDateTime getFechayHora() {
+    public Date getFechayHora() {
         return fechayHora;
     }
 
-    public void setFechayHora(LocalDateTime fechayHora) {
+    public void setFechayHora(Date fechayHora) {
         this.fechayHora = fechayHora;
     }
 

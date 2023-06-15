@@ -4,20 +4,23 @@ package com.proyect.Clinica2.persistence.entity;
 import jakarta.persistence.*;
 
 
-
+@Entity
 public class Domicilio {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
+    @Column
     private String calle;
-
+    @Column
     private Integer altura;
-
+    @Column
     private String localidad;
-
+    @Column
     private String provincia;
 
-
+    public Domicilio() {
+    }
 
     public Integer getId() {
         return id;

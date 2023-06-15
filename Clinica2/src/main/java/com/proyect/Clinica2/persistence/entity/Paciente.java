@@ -32,6 +32,7 @@ public class Paciente {
     private Domicilio domicilio;
 
 
+
     public Paciente() {
     }
 
@@ -102,4 +103,11 @@ public class Paciente {
         this.fechaDeAlta = fechaDeAlta;
     }
 
+    public Domicilio getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(Domicilio domicilio) {
+        this.domicilio = domicilio;
+    }
 }

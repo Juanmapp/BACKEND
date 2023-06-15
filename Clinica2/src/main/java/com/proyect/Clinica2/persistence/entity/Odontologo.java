@@ -25,6 +25,7 @@ public class Odontologo {
         @JsonIgnore
         private Set<Turno> turnos;
 
+
         public Odontologo() {
         }
 
