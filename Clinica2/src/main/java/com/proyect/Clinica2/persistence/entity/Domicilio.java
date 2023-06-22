@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 public class Domicilio {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column
     private String calle;

@@ -11,6 +11,7 @@ import org.springframework.web.context.request.WebRequest;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+
     private static final Logger logger = Logger.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(Exception.class)

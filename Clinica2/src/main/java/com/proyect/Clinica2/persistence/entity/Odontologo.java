@@ -13,7 +13,7 @@ import java.util.Set;
 public class Odontologo {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.SEQUENCE)
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Integer id;
         @Column
         private String apellido;

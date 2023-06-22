@@ -22,15 +22,15 @@ public class OdontologoController {
     }
 
     @PostMapping()
-    public ResponseEntity<?> registrarOdontologo(@RequestBody Odontologo odontologo) {
-        odontologoService.guardar(odontologo);
-        return ResponseEntity.ok(HttpStatus.OK);
+    public ResponseEntity<Odontologo> registrarOdontologo(@RequestBody Odontologo odontologo) {
+        return ResponseEntity.ok(odontologoService.guardar(odontologo));
     }
 
 
     @GetMapping("/{id}")
-    public Optional<Odontologo> buscarOdontologo(@PathVariable Integer id) {
-       return odontologoService.buscar(id);
+    public ResponseEntity<Odontologo> buscarOdontologo(@PathVariable Integer id) {
+        Odontologo odontologo = odontologoService.buscar(id).orElse(null);
+       return ResponseEntity.ok(odontologo);
 
     }
 
