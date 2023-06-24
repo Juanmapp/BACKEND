@@ -27,12 +27,11 @@ public class PacienteService {
         }
     }
     public Paciente modificar(Paciente paciente) {
-        if(pacienteRepository.save(paciente) != null) {
-            return paciente;
+        Integer id = paciente.getId();
+        if ( pacienteRepository.findById(id).isPresent()) {
+            return pacienteRepository.save(paciente);
         }
-        else {
-            return null;
-        }
+        return null;
     }
 
     public void eliminar(Integer id) {

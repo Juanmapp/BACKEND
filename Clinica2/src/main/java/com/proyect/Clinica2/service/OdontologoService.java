@@ -27,12 +27,10 @@ public class OdontologoService {
         }
     }
     public Odontologo modificar(Odontologo odontologo) {
-        if(odontologoRepository.save(odontologo) != null) {
-            return odontologo;
-        }
-        else {
-            return null;
-        }
+        Integer id = odontologo.getId();
+        if ( odontologoRepository.findById(id).isPresent()) {
+            return odontologoRepository.save(odontologo);
+        } return null;
     }
 
     public void eliminar(Integer id) {

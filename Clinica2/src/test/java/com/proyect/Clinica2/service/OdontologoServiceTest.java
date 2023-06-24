@@ -1,11 +1,8 @@
 package com.proyect.Clinica2.service;
 
 import com.proyect.Clinica2.persistence.entity.Odontologo;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
+import org.junit.*;
+
 
 
 import org.junit.runner.RunWith;
@@ -15,8 +12,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-
-
+import java.util.Objects;
+import java.util.Optional;
 
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -38,12 +35,16 @@ public class OdontologoServiceTest {
 
         List<Odontologo> odontologos = odontologoService.listar();
         Assert.assertTrue(odontologos.size()>0);
-//        Assertions.assertTrue(odontologos.size() > 2);
+
 
     }
 
     @Test
     public void guardar() {
+        Odontologo odontologo2 = new Odontologo("Messi", "Leo", "123AAA");
+        Odontologo odontologo = odontologoService.guardar(odontologo2);
+
+        Assert.assertNotNull(odontologo);
 
 
 
@@ -51,13 +52,27 @@ public class OdontologoServiceTest {
 
     @Test
     public void modificar() {
+
+        Odontologo odontologo = odontologoService.buscar(2).get();
+        odontologo.setApellido("Messi");
+        odontologoService.modificar(odontologo);
+        Assert.assertTrue(odontologoService.buscar(2).get().getApellido().equals("Messi"));
+
+
+
     }
 
     @Test
     public void eliminar() {
+        odontologoService.eliminar(1);
+        Assert.assertFalse(odontologoService.buscar(1).isPresent());
+
     }
 
     @Test
     public void buscar() {
+    Optional<Odontologo> odontologo3 = odontologoService.buscar(1);
+    Assert.assertTrue(odontologo3 != null);
+
     }
 }
