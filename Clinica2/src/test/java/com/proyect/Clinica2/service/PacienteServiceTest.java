@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -50,18 +51,26 @@ class PacienteServiceTest {
     @Test
     public void modificar() {
 
-            Paciente paciente = pacienteService.buscar(1).get();
+            Paciente paciente = pacienteService.buscar(5).get();
             paciente.setApellido("Carnita");
             pacienteService.modificar(paciente);
-            Assert.assertTrue(pacienteService.buscar(1).get().getApellido().equals("Carnita"));
+            Assert.assertTrue(pacienteService.buscar(5).get().getApellido().equals("Carnita"));
 
     }
 
     @Test
     public void eliminar() {
+
+        pacienteService.eliminar(6);
+        Assertions.assertNull(pacienteService.buscar(6));
+
+
     }
 
     @Test
     public void buscar() {
+        Assert.assertNotNull(pacienteService.buscar(3));
+
+
     }
 }

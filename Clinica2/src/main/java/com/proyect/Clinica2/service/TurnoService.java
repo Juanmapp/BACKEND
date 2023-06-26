@@ -23,8 +23,11 @@ public class TurnoService {
     }
 
     public Turno modificarTurno(Turno turno) {
-
-        return turnoRepository.save(turno);
+        Integer id = turno.getId();
+        if ( turnoRepository.findById(id).isPresent()) {
+            return turnoRepository.save(turno);
+        }
+        return null;
 
     }
 

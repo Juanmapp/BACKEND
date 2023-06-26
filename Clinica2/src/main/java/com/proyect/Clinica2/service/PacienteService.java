@@ -35,12 +35,14 @@ public class PacienteService {
     }
 
     public void eliminar(Integer id) {
-        pacienteRepository.deleteById(id);
+        pacienteRepository.deleteById(id);      ;
     }
 
     public Optional<Paciente> buscar(Integer id) {
-        return pacienteRepository.findById(id);
-
+        if(pacienteRepository.findById(id).isEmpty()){
+            return null;
+        }
+            return pacienteRepository.findById(id);
 
     }
 }
