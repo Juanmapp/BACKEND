@@ -30,21 +30,22 @@ public class PacienteService {
         }
     }
     public Paciente modificar(Paciente paciente) {
-        if(pacienteRepository.save(paciente) != null) {
-            return paciente;
+        Integer id = paciente.getId();
+        if ( pacienteRepository.findById(id).isPresent()) {
+            return pacienteRepository.save(paciente);
         }
-        else {
-            return null;
-        }
+        return null;
     }
 
     public void eliminar(Integer id) {
-        pacienteRepository.deleteById(id);
+        pacienteRepository.deleteById(id);      ;
     }
 
     public Optional<Paciente> buscar(Integer id) {
-        return pacienteRepository.findById(id);
-
+        if(pacienteRepository.findById(id).isEmpty()){
+            return null;
+        }
+            return pacienteRepository.findById(id);
 
     }
 

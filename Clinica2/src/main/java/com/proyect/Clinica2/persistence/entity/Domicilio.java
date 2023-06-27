@@ -22,13 +22,25 @@ public class Domicilio {
     public Domicilio() {
     }
 
+    public Domicilio(Integer id, String calle, Integer altura, String localidad, String provincia) {
+        this.id = id;
+        this.calle = calle;
+        this.altura = altura;
+        this.localidad = localidad;
+        this.provincia = provincia;
+    }
+
+    public Domicilio(String calle, Integer altura, String localidad, String provincia) {
+        this.calle = calle;
+        this.altura = altura;
+        this.localidad = localidad;
+        this.provincia = provincia;
+    }
+
     public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getCalle() {
         return calle;

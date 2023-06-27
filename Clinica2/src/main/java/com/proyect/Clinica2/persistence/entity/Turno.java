@@ -25,12 +25,21 @@ public class Turno {
     public Turno() {
     }
 
-    public Integer getId() {
-        return id;
+    public Turno(Paciente paciente, Odontologo odontologo, Date fechayHora) {
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.fechayHora = fechayHora;
     }
 
-    public void setId(Integer id) {
+    public Turno(Integer id, Paciente paciente, Odontologo odontologo, Date fechayHora) {
         this.id = id;
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.fechayHora = fechayHora;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public Paciente getPaciente() {

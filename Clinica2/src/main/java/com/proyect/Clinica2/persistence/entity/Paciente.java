@@ -40,18 +40,18 @@ public class Paciente {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
-
         this.dni = dni;
         this.fechaDeAlta = fechaDeAlta;
+
 
     }
 
     public Paciente(String nombre, String apellido, String dni, Date fechaDeAlta ) {
         this.nombre = nombre;
         this.apellido = apellido;
-
         this.dni = dni;
         this.fechaDeAlta = fechaDeAlta;
+
 
     }
 
@@ -67,9 +67,6 @@ public class Paciente {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;
