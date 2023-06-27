@@ -4,6 +4,7 @@ import com.proyect.Clinica2.persistence.entity.Domicilio;
 import com.proyect.Clinica2.persistence.entity.Odontologo;
 import com.proyect.Clinica2.persistence.entity.Paciente;
 import com.proyect.Clinica2.persistence.entity.Turno;
+import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -41,17 +42,23 @@ class TurnoServiceTest {
 
     @Test
     void listarTodos() {
-        List<Turno> turnos = turnoService.modificarTurno();
+        List<Turno> turnos = turnoService.listarTodos();
         assertTrue(turnos.size()>0);
     }
 
     @Test
     void modificarTurno() {
-        Turno turno = turnoService.lis
-        turnoService.modificarTurno()
+                Turno turno = new Turno(1,pacienteService.buscar(25).get(), odontologoService.buscar(18).get(), new Date(05-01-2023));
+        turnoService.modificarTurno(turno);
+        Assert.assertTrue(turnoService.buscarTurno(1).get().getOdontologo().getId() == 18);
+
     }
 
     @Test
     void eliminarTurno() {
+
+        turnoService.eliminarTurno(2);
+        assertNull(turnoService.buscarTurno(2));
+
     }
 }

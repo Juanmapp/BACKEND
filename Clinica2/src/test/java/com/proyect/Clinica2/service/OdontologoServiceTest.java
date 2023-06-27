@@ -41,15 +41,12 @@ public class OdontologoServiceTest {
 
     @Test
     public void guardar() {
-<<<<<<< HEAD
-        Odontologo odontologo = new Odontologo("Messi", "Leo", "DSASAD");
 
-=======
         Odontologo odontologo2 = new Odontologo("Messi", "Leo", "123AAA");
         Odontologo odontologo = odontologoService.guardar(odontologo2);
 
         Assert.assertNotNull(odontologo);
->>>>>>> 0a048ed8f6bc3c449716c9750af9b0b62e42a04c
+
 
 
 

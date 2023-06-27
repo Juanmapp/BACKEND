@@ -1,4 +1,4 @@
-package com.proyect.Clinica2.service;
+package com.proyect.Clinica2.config;
 
 import com.proyect.Clinica2.persistence.entity.AppUser;
 import com.proyect.Clinica2.persistence.entity.AppUserRole;
