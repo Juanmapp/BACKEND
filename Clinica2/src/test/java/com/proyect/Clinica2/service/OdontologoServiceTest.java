@@ -44,6 +44,8 @@ public class OdontologoServiceTest {
 
     @Test
     public void guardar() {
+        Odontologo odontologo = new Odontologo("Messi", "Leo", "DSASAD");
+
 
 
 

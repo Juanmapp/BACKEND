@@ -3,6 +3,9 @@ package com.proyect.Clinica2.service;
 import com.proyect.Clinica2.persistence.entity.Paciente;
 import com.proyect.Clinica2.persistence.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -43,5 +46,15 @@ public class PacienteService {
         return pacienteRepository.findById(id);
 
 
+    }
+
+    @Configuration
+    public static class PasswordEncoder {
+
+        @Bean
+        public BCryptPasswordEncoder bCryptPasswordEncoder() {
+
+            return new BCryptPasswordEncoder();
+        }
     }
 }

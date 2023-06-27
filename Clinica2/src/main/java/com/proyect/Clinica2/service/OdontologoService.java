@@ -19,16 +19,13 @@ public class OdontologoService {
     }
 
     public Odontologo guardar(Odontologo odontologo) {
-        if(odontologoRepository.save(odontologo) != null) {
-            return odontologo;
-        }
-        else {
-            return null;
-        }
+        return odontologoRepository.save(odontologo);
+
     }
     public Odontologo modificar(Odontologo odontologo) {
-        if(odontologoRepository.save(odontologo) != null) {
-            return odontologo;
+        Integer id = odontologo.getId();
+        if(id != null) {
+            return odontologoRepository.save(odontologo);
         }
         else {
             return null;
