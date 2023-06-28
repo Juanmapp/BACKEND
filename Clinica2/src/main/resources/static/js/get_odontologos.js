@@ -1,5 +1,5 @@
 window.addEventListener('load', function(){
-    
+    let listarTodos = 
     (function () {
         let url = '/odontologos';
         let payload = {
@@ -8,8 +8,9 @@ window.addEventListener('load', function(){
         fetch(url,payload)
         .then(response => response.json())
         .then(data => {
-            console.log("hola1");
+            console.log(data);
             for(odontologo of data) {
+                console.log("hola2");
                 let divOdontologos = document.querySelector('#odontologos-div')
                 divOdontologos.innerHTML += `<p> ID : ${odontologo.id} </p>`
                 console.log(odontologo.id);
@@ -17,5 +18,5 @@ window.addEventListener('load', function(){
             
         })
     })
-    console.log("hola");
+    
 })
