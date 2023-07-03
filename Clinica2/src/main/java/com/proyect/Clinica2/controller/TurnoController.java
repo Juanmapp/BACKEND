@@ -1,6 +1,6 @@
 package com.proyect.Clinica2.controller;
 
-import com.proyect.Clinica2.persistence.entity.Paciente;
+
 import com.proyect.Clinica2.persistence.entity.Turno;
 import com.proyect.Clinica2.service.TurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.file.Path;
+
 import java.util.List;
 
 @RestController

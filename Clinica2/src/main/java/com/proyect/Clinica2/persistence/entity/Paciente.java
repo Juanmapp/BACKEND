@@ -17,12 +17,12 @@ public class Paciente {
     private String nombre;
     @Column
     private String apellido;
-    //Como ver la relacion para ponerlo en la tabla
+
 
     @Column
     private String dni;
     @Column
-    private Date fechaDeAlta; // Hay que hacer una clase?
+    private Date fechaDeAlta;
     @OneToMany(mappedBy = "paciente")
     @JsonIgnore
     private Set<Turno> turnos;

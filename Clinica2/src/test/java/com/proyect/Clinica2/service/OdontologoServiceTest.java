@@ -1,6 +1,6 @@
 package com.proyect.Clinica2.service;
-
 import com.proyect.Clinica2.persistence.entity.Odontologo;
+
 import org.junit.*;
 
 
@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-import java.util.Objects;
+
 import java.util.Optional;
 
 
@@ -66,8 +66,8 @@ public class OdontologoServiceTest {
 
     @Test
     public void eliminar() {
-        odontologoService.eliminar(1);
-        Assert.assertFalse(odontologoService.buscar(1).isPresent());
+        odontologoService.eliminar(3);
+        Assert.assertFalse(odontologoService.buscar(3).isPresent());
 
     }
 

@@ -35,7 +35,7 @@ public class OdontologoController {
     }
 
     @PutMapping()
-    public ResponseEntity<?> modificarOdontolog(@RequestBody Odontologo odontologo) {
+    public ResponseEntity<?> modificarOdontologo(@RequestBody Odontologo odontologo) {
         odontologoService.modificar(odontologo);
         return ResponseEntity.ok(HttpStatus.OK);
     }

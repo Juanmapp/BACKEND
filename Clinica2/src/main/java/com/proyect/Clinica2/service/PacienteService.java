@@ -3,9 +3,8 @@ package com.proyect.Clinica2.service;
 import com.proyect.Clinica2.persistence.entity.Paciente;
 import com.proyect.Clinica2.persistence.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,19 +21,15 @@ public class PacienteService {
     }
 
     public Paciente guardar(Paciente paciente) {
-        if(pacienteRepository.save(paciente) != null) {
-            return paciente;
-        }
-        else {
-            return null;
-        }
+        return pacienteRepository.save(paciente);
     }
     public Paciente modificar(Paciente paciente) {
         Integer id = paciente.getId();
-        if ( pacienteRepository.findById(id).isPresent()) {
+        if ( id != null) {
             return pacienteRepository.save(paciente);
+        } else {
+            return null;
         }
-        return null;
     }
 
     public void eliminar(Integer id) {
@@ -42,20 +37,7 @@ public class PacienteService {
     }
 
     public Optional<Paciente> buscar(Integer id) {
-        if(pacienteRepository.findById(id).isEmpty()){
-            return null;
-        }
-            return pacienteRepository.findById(id);
+        return pacienteRepository.findById(id);
 
-    }
-
-    @Configuration
-    public static class PasswordEncoder {
-
-        @Bean
-        public BCryptPasswordEncoder bCryptPasswordEncoder() {
-
-            return new BCryptPasswordEncoder();
-        }
     }
 }

@@ -1,5 +1,5 @@
-package com.proyect.Clinica2.persistence.entity;
-
-public enum AppUserRole {
-    USER,ADMIN
-}
+//package com.proyect.Clinica2.persistence.entity;
+//
+//public enum AppUserRole {
+//    USER,ADMIN
+//}

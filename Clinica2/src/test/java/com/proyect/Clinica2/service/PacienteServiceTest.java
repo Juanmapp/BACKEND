@@ -1,11 +1,6 @@
 package com.proyect.Clinica2.service;
 import com.proyect.Clinica2.persistence.entity.Paciente;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
 import org.junit.*;
-
-
 
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
@@ -21,7 +16,7 @@ import java.util.Optional;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class PacienteServiceTest {
+public class PacienteServiceTest {
 
     @Autowired
     private PacienteService pacienteService;
@@ -37,7 +32,7 @@ class PacienteServiceTest {
     @Test
     public void listar() {
         List<Paciente> pacientes = pacienteService.listar();
-        Assertions.assertTrue(pacientes.size()>0);
+        Assert.assertTrue(pacientes.size()>0);
     }
 
     @Test
@@ -61,15 +56,16 @@ class PacienteServiceTest {
     @Test
     public void eliminar() {
 
-        pacienteService.eliminar(6);
-        Assertions.assertNull(pacienteService.buscar(6));
+        pacienteService.eliminar(3);
+        Assert.assertFalse(pacienteService.buscar(3).isPresent());
 
 
     }
 
     @Test
     public void buscar() {
-        Assert.assertNotNull(pacienteService.buscar(3));
+        Optional<Paciente> paciente3 = pacienteService.buscar(1);
+        Assert.assertNotNull(paciente3 !=null);
 
 
     }

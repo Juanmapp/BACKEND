@@ -1,7 +1,7 @@
 package com.proyect.Clinica2.controller;
 
 
-import com.proyect.Clinica2.persistence.entity.Odontologo;
+
 import com.proyect.Clinica2.persistence.entity.Paciente;
 import com.proyect.Clinica2.service.DomicilioService;
 import com.proyect.Clinica2.service.PacienteService;
@@ -21,6 +21,11 @@ public class PacienteController {
   @Autowired
   private DomicilioService domicilioService;
 
+  @GetMapping()
+  public List<Paciente> listarTodos() {
+      return this.pacienteService.listar();
+  }
+
     @PostMapping()
     public ResponseEntity<?> registrarPaciente(@RequestBody Paciente paciente) {
         pacienteService.guardar(paciente);
@@ -29,16 +34,25 @@ public class PacienteController {
 
     }
 
-    @GetMapping()
-    public List<Paciente> listarTodos() {
-        return this.pacienteService.listar();
+    @GetMapping("/{id}")
+    public ResponseEntity<Paciente> buscarPaciente(@PathVariable Integer id) {
+        Paciente paciente = pacienteService.buscar(id).orElse(null);
+        return ResponseEntity.ok(paciente);
+
     }
 
 
-//
-//
-//    @PostMapping
-//    public ResponseEntity<Paciente> registrarPaciente(@RequestBody Paciente paciente) {
-//        return ResponseEntity.ok(pacienteService.agregar(paciente));
-//    }
+    @PutMapping()
+    public ResponseEntity<?> modificarPaciente(@RequestBody Paciente paciente) {
+        pacienteService.modificar(paciente);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> eliminarPaciente(@PathVariable Integer id) {
+        pacienteService.eliminar(id);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+
 }

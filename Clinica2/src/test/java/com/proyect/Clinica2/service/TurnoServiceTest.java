@@ -5,6 +5,7 @@ import com.proyect.Clinica2.persistence.entity.Odontologo;
 import com.proyect.Clinica2.persistence.entity.Paciente;
 import com.proyect.Clinica2.persistence.entity.Turno;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -29,28 +30,39 @@ class TurnoServiceTest {
     @Autowired
     private PacienteService pacienteService;
 
+    @Before
+    public void registrarTurnoBefore() {
+        Odontologo odontologo = new Odontologo("De paul", "Lucas", "12214");
+        odontologoService.guardar(odontologo);
+        Paciente paciente = new Paciente( "Matias", "Kraneviter", "32342345", new Date(05-01-2023));
+        pacienteService.guardar(paciente);
+        Turno turno = new Turno(paciente,odontologo,new Date(07-04-2023));
+        turnoService.guardarTurno(turno);
+    }
+
     @Test
     void guardarTurno() {
         Odontologo odontologo = new Odontologo("Costa", "Diego", "12214");
         odontologoService.guardar(odontologo);
-        Paciente paciente = new Paciente( "Sergio", "Aguero", "3789559", new Date(05-01-2023));
+        Paciente paciente = new Paciente( "Sergio", "Aguero", "3789559", new Date(2023-4-7));
         pacienteService.guardar(paciente);
-        Turno turno = new Turno(paciente,odontologo,new Date(06-05-2023));
+        Turno turno = new Turno(paciente,odontologo,new Date(123,04,03,04,05,01));
         Turno turno1 = turnoService.guardarTurno(turno);
         assertNotNull(turno1);
     }
 
     @Test
     void listarTodos() {
+        this.registrarTurnoBefore();
         List<Turno> turnos = turnoService.listarTodos();
-        assertTrue(turnos.size()>0);
+        Assert.assertTrue(turnos.size()>0);
     }
 
     @Test
     void modificarTurno() {
-                Turno turno = new Turno(1,pacienteService.buscar(25).get(), odontologoService.buscar(18).get(), new Date(05-01-2023));
+        Turno turno = new Turno(1,pacienteService.buscar(1).get(), odontologoService.buscar(1).get(), new Date(05-01-2023));
         turnoService.modificarTurno(turno);
-        Assert.assertTrue(turnoService.buscarTurno(1).get().getOdontologo().getId() == 18);
+        Assert.assertTrue(turnoService.buscarTurno(1).get().getOdontologo().getId() == 1);
 
     }
 
